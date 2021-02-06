@@ -2,15 +2,21 @@ package com.workshopmongo;
 
 import java.io.Serializable;
 import java.util.Objects;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  *
  * @author Jonas created 02/02/2021
  */
+
+//Colecao do mongo DB
+@Document(collection="user")
 public class User implements Serializable{
     
     private static final long serialVersionUID = 1L;
     
+    @Id
     private String id;
     private String name;
     private String email;
@@ -29,7 +35,7 @@ public class User implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.id);
+        hash = 19 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -50,6 +56,7 @@ public class User implements Serializable{
         }
         return true;
     }
+    
     
     
     //GET AND SET
