@@ -13,5 +13,6 @@ import org.springframework.stereotype.Repository;
 //Anotacao springBoot 
 @Repository
 public interface UserRepository extends MongoRepository<User, String>{
+   
     
 }
