@@ -4,6 +4,7 @@ import com.workshopmongo.repository.UserRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import static org.springframework.data.mongodb.core.aggregation.MergeOperation.UniqueMergeId.id;
 import org.springframework.stereotype.Service;
 
 /**
@@ -32,6 +33,12 @@ public class UserService {
     //Method that insert a nre User 
     public User insert(User obj) {
         return repo.insert(obj);
+    }
+
+    //Method that delete a User 
+    public void delete(String id) {
+        findById(id);
+        repo.deleteById(id);
     }
 
     //Method that get a DTO and instantiation a user
