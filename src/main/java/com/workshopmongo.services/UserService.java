@@ -29,4 +29,14 @@ public class UserService {
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
     }
 
+    //Method that insert a nre User 
+    public User insert(User obj) {
+        return repo.insert(obj);
+    }
+
+    //Method that get a DTO and instantiation a user
+    public User fromDTO(UserDTO objDto) {
+        return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
+    }
+
 }
