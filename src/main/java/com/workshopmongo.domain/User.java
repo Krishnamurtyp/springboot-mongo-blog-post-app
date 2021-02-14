@@ -1,8 +1,12 @@
 package com.workshopmongo;
 
+
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
@@ -20,7 +24,9 @@ public class User implements Serializable{
     private String id;
     private String name;
     private String email;
-
+    @DBRef
+private List<Post> posts = new ArrayList<>();
+    
     //CONSTRUCTOR
     public User() {
     }
@@ -34,8 +40,8 @@ public class User implements Serializable{
     //EQUALS AND HASHCODE BY ID
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 19 * hash + Objects.hashCode(this.id);
+        int hash = 5;
+        hash = 67 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -56,8 +62,6 @@ public class User implements Serializable{
         }
         return true;
     }
-    
-    
     
     //GET AND SET
     public String getId() {
@@ -84,4 +88,11 @@ public class User implements Serializable{
         this.email = email;
     }
 
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 }
