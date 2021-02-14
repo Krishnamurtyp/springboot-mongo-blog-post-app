@@ -1,11 +1,10 @@
 package com.workshopmongo.resource;
 
+import com.workshopmongo.Post;
 import com.workshopmongo.User;
 import com.workshopmongo.UserDTO;
 import com.workshopmongo.UserService;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class UserResource {
     @Autowired
     private UserService service;
 
-    //Metodo para mostrar todos os elementos da lsita, o select from
+    //EndPoint that show of elements of list, by select 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<UserDTO>> findAll() {
         List<User> list = service.findAll();
@@ -37,14 +36,14 @@ public class UserResource {
         return ResponseEntity.ok().body(listDto);
     }
 
-    //Method that return user by your ID
+    //EndPoint that return user by your ID
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<UserDTO> findById(@PathVariable String id) {
         User obj = service.findById(id);
         return ResponseEntity.ok().body(new UserDTO(obj));
     }
 
-    //Method that insert a new user
+    //EndPoint that insert a new user
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<Void> insert(@RequestBody UserDTO objDto) {
         User obj = service.fromDTO(objDto);
@@ -53,14 +52,14 @@ public class UserResource {
         return ResponseEntity.created(uri).build();
     }
 
-    //Method that return user by your ID
+    //EndPoint that that return user by your ID
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> delete(@PathVariable String id) {
         service.delete(id);
         return ResponseEntity.noContent().build();//cod 204 = noContent
     }
 
-    //Method that update user by your ID
+    //EndPoint that  that update user by your ID
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Void> update(@RequestBody UserDTO objDto, @PathVariable String id) {
         User obj = service.fromDTO(objDto);
@@ -70,4 +69,10 @@ public class UserResource {
         return ResponseEntity.noContent().build();//cod 204 = noContent
 
     }
+    
+    @RequestMapping(value="/{id}/posts", method=RequestMethod.GET)
+ 	public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+		User obj = service.findById(id);
+		return ResponseEntity.ok().body(obj.getPosts());
+	}
 }
