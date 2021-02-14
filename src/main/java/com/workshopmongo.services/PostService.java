@@ -26,7 +26,7 @@ public class PostService {
 
     //Method that created automatic queries
     public List<Post> findByTitle(String text) {
-        return repo.findByTitleContainingIgnoreCase(text);
+        return repo.searchTitle(text);
     }
 
 }
