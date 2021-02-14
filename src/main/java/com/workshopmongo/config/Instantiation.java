@@ -1,5 +1,6 @@
 package com.workshopmongo.config;
 
+import com.workshopmongo.AuthorDTO;
 import com.workshopmongo.Post;
 import com.workshopmongo.User;
 import com.workshopmongo.repository.PostRepository;
@@ -42,8 +43,8 @@ public class Instantiation implements CommandLineRunner {
         User bob = new User(null, "Bob Grey", "bob@gmail.com");
 
         //Instantiation Post with author associated
-        Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para São Paulo. Abracos", maria);
-        Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia", "Acordei feliz hoje", maria);
+        Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para São Paulo. Abracos", new AuthorDTO(maria));
+        Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia", "Acordei feliz hoje", new AuthorDTO(maria));
 
         userReposiroty.saveAll(Arrays.asList(maria, alex, bob));
 	postReposiroty.saveAll(Arrays.asList(post1, post2));
