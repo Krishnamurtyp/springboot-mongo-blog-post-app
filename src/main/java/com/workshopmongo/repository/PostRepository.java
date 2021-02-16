@@ -14,10 +14,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PostRepository extends MongoRepository<Post, String> {
 
+    //This anotation enable take with query of MongoDB in the form of text JSON
     @Query("{ 'title': { $regex: ?0, $options: 'i' } }")
     List<Post> searchTitle(String text);
 
-    //Query method, to created automatic queries
+    //Especial method of Spring to gcreate authomatic query
     List<Post> findByTitleContainingIgnoreCase(String text);
 
 }
