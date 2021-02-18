@@ -1,0 +1,30 @@
+h1{
+	text-align: center;
+}
+
+h2{
+	background-color: #696969;
+	text-align: center;
+}
+
+figure{
+	max-width: 100%;
+	box-sizing: border-box;
+
+	margin: 30px;
+	padding: 15px;
+	
+  	text-align: center;
+	background-color: whitesmoke;
+	border: 1px solid lightgrey;
+       }
+
+figcaption{
+	margin-top: 10px;
+	  }
+
+	.Modelo-Dominio{
+		width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+	}
