@@ -5,7 +5,7 @@
 	<img src="img/UML.png" title="Modelo de domínio">
 </figure>
 
-<h2> Sobre </h2>
+<h2> Sobre / About</h2>
 <p>Esse projeto foi desenvolvido em SptingBoot e MongoDB, nesse projeto criei um objeto Post que possui varios comentarios, cada usuario pode fazer um Post novo  e um novo comentario.</p>
 <p>Foi implementado todas as operacoes CRUD para o usuario e os metodos para adicionar um novo Post e comentários .</p>
 <p>Esse é um projeto feito pelo curso de<a href="https://www.udemy.com/course/java-curso-completo/"> Java COMPLETO Programação Orientada a Objetos + Projetos</a>,
@@ -15,7 +15,7 @@ do Dr. Nelio Alves.</p>
 <p>Was implemented all the operation CRUD to the User and the methods to add a new Post and a new Comments.
 <p>This project was made by the curs <a href="https://www.udemy.com/course/java-curso-completo/">Full Stack Java Object Oriented Programming + Projects, Dr. Nelio Alves.</p>
 
-<h2> Tecnologias utilizadas </h2>
+<h2> Tecnologias utilizadas / Technologies used </h2>
 <u1>
     <li><a href="https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html"> JDK 15 </a> : Java Development Kit 15 - um kit de desenvolvimento para 
     	construção de aplicações e componentes usando a linguagem de programação Java;</li>
@@ -29,7 +29,7 @@ do Dr. Nelio Alves.</p>
     <li><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/"> MongoDB Compas</a>: Compass é uma interface gráfica de usuário para MongoDB</li>
   </u1> 
 
- <h2> Intalacao </h2>
+ <h2> Intalacao / Installation</h2>
   <p>Para baixar o código-fonte do projeto em sua máquina, primeiramente voce terá que ter instalado em seu computador o <a href="https://git-scm.com/"> GIT </a>.</p>
   <p>For download the source code of project in yout PC, firstly you must have install in your PC the<a href="https://git-scm.com/"> GIT </a>.</p>
   <br>
@@ -37,7 +37,7 @@ do Dr. Nelio Alves.</p>
   <p>With the Git installed, in your terminal execute the following command:</p>
   
   ```
-  	$ git clone https://github.com/jonasmachados/workshop-spring-boot-mongodb
+  $ git clone https://github.com/jonasmachados/workshop-spring-boot-mongodb
   ```
   <p>Com o projeto baixado, Instale o Postman:</p>
   <p>With the downloaded project, install the Postman:</p>
@@ -52,9 +52,9 @@ do Dr. Nelio Alves.</p>
    ```
 	https://www.mongodb.com/try/download/community/
    ```
+   <p>Use a porta padrao do MongoDB: </p>
+   <p>Use the port of MongoDB:</p>
    
-   Use a porta padrao do MongoDB
-   Use the port of MongoDB
    ```
    28017
    ```
