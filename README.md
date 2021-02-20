@@ -37,19 +37,36 @@ do Dr. Nelio Alves.</p>
   <p>With the Git installed, in your terminal execute the following command:</p>
   
   ```
-  $ git clone https://github.com/jonasmachados/workshop-spring-boot-mongodb
+  	$ git clone https://github.com/jonasmachados/workshop-spring-boot-mongodb
   ```
+  <p>Com o projeto baixado, Instale o Postman:</p>
+  <p>With the downloaded project, install the Postman:</p>
+  
+   ```
+	https://www.postman.com/downloads/
+   ```
+   
+   <p>Instale o MongoDB: </p>
+   <p>Install the MongoDB:</p>
+   
+   ```
+	https://www.mongodb.com/try/download/community/
+   ```
+   
+   Use a porta padrao do MongoDB
+   Use the port of MongoDB
+   ```
+   28017
+   ```
+   
+   <p>Instale o Mongo Compass: </p>
+   <p>Install the MongoCompass:</p>
+   
+   ```
+	https://www.mongodb.com/products/compass
+   ```
+   
+  
 <h2> Author: </h2>
-
-* **Jonas Machado** - *Initial work.*
-
-<h2>  License</h2>
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-<h2> Agradecimentos</h2>
-  <u1>
-    <li>A todos que ajudarem a contribuir com o projeto;</li>
-    <li>Todos aqueles que utilizarem o codigo para conhecimento</li>
-   </u1>
+      <b>Dr. Nelio Alves</b>
 
